@@ -46,7 +46,7 @@
       ]
     ],
     "experiments": {
-      "newArchitecture": true
+      "newArchitecture": false
     }
   }
 }
