@@ -11,11 +11,16 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Allow $(PRODUCT_NAME) to access your photos",
+        "NSPhotoLibraryAddUsageDescription": "Allow $(PRODUCT_NAME) to save photos",
+        "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to use your camera",
+        "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to use your microphone"
+      },
+      "bundleIdentifier": "com.mitchellbrouwer.expo-starter-kit-typescript"
     },
     "android": {
       "adaptiveIcon": {
@@ -26,6 +31,6 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": ["@viro-community/react-viro"]
+    "plugins": ["@reactvision/react-viro"]
   }
 }

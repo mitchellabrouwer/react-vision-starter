@@ -3,10 +3,11 @@ import { StyleSheet } from "react-native";
 import {
   ViroARScene,
   ViroText,
+  ViroImage,
   ViroTrackingStateConstants,
   ViroARSceneNavigator,
   ViroTrackingReason,
-} from "@viro-community/react-viro";
+} from "@reactvision/react-viro";
 
 const HelloWorldSceneAR = () => {
   const [text, setText] = useState("Initializing AR...");
@@ -28,6 +29,13 @@ const HelloWorldSceneAR = () => {
         position={[0, 0, -1]}
         style={styles.helloWorldTextStyle}
       />
+      {/* <ViroImage */}
+      {/*   source={require("./assets/Chester.png")} */}
+      {/*   // position={[0.5, -0.5, -1.5]} */}
+      {/*   // scale={[0.3, 0.3, 0.3]} */}
+      {/*   width={1} */}
+      {/*   height={1} */}
+      {/* /> */}
     </ViroARScene>
   );
 };
