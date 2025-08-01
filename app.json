@@ -11,12 +11,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "deploymentTarget": "12.0",
       "infoPlist": {
         "NSPhotoLibraryUsageDescription": "Allow $(PRODUCT_NAME) to access your photos",
         "NSPhotoLibraryAddUsageDescription": "Allow $(PRODUCT_NAME) to save photos",
@@ -44,9 +41,6 @@
           "microphoneUsageDescription": "This app needs access to microphone for AR features"
         }
       ]
-    ],
-    "experiments": {
-      "newArchitecture": false
-    }
+    ]
   }
 }
