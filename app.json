@@ -11,14 +11,18 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
+      "deploymentTarget": "12.0",
       "infoPlist": {
         "NSPhotoLibraryUsageDescription": "Allow $(PRODUCT_NAME) to access your photos",
         "NSPhotoLibraryAddUsageDescription": "Allow $(PRODUCT_NAME) to save photos",
-        "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to use your camera",
-        "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to use your microphone"
+        "NSCameraUsageDescription": "This app needs access to camera for AR features",
+        "NSMicrophoneUsageDescription": "This app needs access to microphone for AR features",
+        "NSLocationWhenInUseUsageDescription": "This app needs location access for AR features"
       },
       "bundleIdentifier": "com.mitchellbrouwer.expo-starter-kit-typescript"
     },
@@ -26,11 +30,23 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.mitchellbrouwer.expostarterkittypescript"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": ["@reactvision/react-viro"]
+    "plugins": [
+      [
+        "@reactvision/react-viro",
+        {
+          "cameraUsageDescription": "This app needs access to camera for AR features",
+          "microphoneUsageDescription": "This app needs access to microphone for AR features"
+        }
+      ]
+    ],
+    "experiments": {
+      "newArchitecture": true
+    }
   }
 }
